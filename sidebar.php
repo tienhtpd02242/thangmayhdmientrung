@@ -1,4 +1,10 @@
-<?php $global_opt = get_fields('option'); ?>
+<?php 
+$global_opt = get_fields('option');
+$post_id = get_the_ID();
+
+$arr_post = array();
+$arr_post[] = $post_id;
+?>
 <div class="sidebar">
     <div class="__image_gif">
         <img src="<?php echo $global_opt['logo_header'];?>">
@@ -10,7 +16,7 @@
             'post_type' => 'dichvu',
             'posts_per_page' => -1,
             'post_status' => 'publish',
-
+            'post__not_in' => $arr_post,
         ));
         if( $query->have_posts() ){
             echo "<ul>";
