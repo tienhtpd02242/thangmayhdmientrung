@@ -14,7 +14,7 @@ $arr_post[] = $post_id;
         <?php 
         $query = new WP_Query( array(
             'post_type' => 'dichvu',
-            'posts_per_page' => -1,
+            'posts_per_page' => 10,
             'post_status' => 'publish',
             'post__not_in' => $arr_post,
         ));
