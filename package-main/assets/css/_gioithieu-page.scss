@@ -1,0 +1,40 @@
+.ss_wrap-introduce{
+  padding: 24px 0;
+  .wrap-introduce{
+    display: flex;
+    .content_introduce{
+      max-width: calc(100% - 300px);
+      width: 100%;
+      padding-right: 36px;
+      .__heading_introduce{
+        font-size: 20px;
+        line-height: 24px;
+        color: #93594a;
+        font-weight: 700;
+        margin-bottom: 24px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+@media (max-width: $screen_tablet_smaller){
+  .ss_wrap-introduce{
+    .wrap-introduce{
+      .content_introduce{
+        max-width: calc(100% - 250px);
+        padding-right: 24px;
+      }
+    }
+  }
+}
+@media (max-width: $screen_mobile){
+  .ss_wrap-introduce{
+    .wrap-introduce{
+      flex-direction: column;
+      .content_introduce{
+        max-width: 100%;
+        padding-right: 0;
+      }
+    }
+  }
+}

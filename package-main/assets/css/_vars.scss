@@ -1,0 +1,10 @@
+.container{
+  max-width: 1172px;
+  width: 100%;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+$screen_tablet_smaller: 992px - 0.02;
+$screen_mobile: 768px - 0.02;
+$screen_mobile_smaller: 500px - 0.02;

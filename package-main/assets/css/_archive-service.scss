@@ -1,0 +1,129 @@
+.archive{
+  .__ss_service_archive{
+    padding: 48px 0;
+    .wrap_service_archive{
+      display: flex;
+    }
+  }
+}
+.archive{
+  .wrap_item{
+    max-width: calc(100% - 300px);
+    width: 100%;
+    padding-right: 36px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 36px 24px ;
+    .__item{
+      .__thumb{
+        overflow: hidden;
+        img{
+          width: 100%;
+          height: 300px;
+          object-fit: cover;
+          display: block;
+          transition: .3s ease all;
+        }
+      }
+      a{
+        text-decoration: none;
+        .__title{
+          font-size: 18px;
+          line-height: 25px;
+          font-weight: 700;
+          color: #000000;
+          margin: 6px 0;
+          transition: .3s ease all;
+        }
+      }
+      .__excerpt{
+        p{
+          font-size: 14px;
+          line-height: 20px;
+          color: #666666;
+          font-weight: 400;
+          overflow: hidden;
+         text-overflow: ellipsis;
+         display: -webkit-box;
+         -webkit-line-clamp: 3; /* number of lines to show */
+         -webkit-box-orient: vertical;
+        }
+      }
+      &:hover{
+        .__thumb{
+          img{
+            transform: scale(1.1);
+          }
+        }
+        a{
+          .__title{
+            color: #fd8f00;
+          }
+        }
+      }
+    }
+  }
+  .__image_gif {
+    max-width: 300px;
+    width: 100%;
+  }
+}
+
+@media (max-width: $screen_tablet_smaller){
+  .archive{
+    .__ss_service_archive {
+      .wrap_service_archive{
+        flex-direction: column;
+      }
+    }
+  }
+  .archive{
+    .wrap_item{
+      max-width: 100%;
+      padding: 0;
+    }
+    .__image_gif{
+      max-width: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 24px;
+    }
+  }
+}
+
+@media (max-width: $screen_mobile){
+  .archive{
+    .wrap_item{
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 24px 12px;
+      .__item{
+        .__thumb{
+          img{
+            height: 250px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $screen_mobile_smaller){
+  .archive{
+    .__ss_service_archive{
+      padding: 24px 0;
+    }
+  }
+  .archive{
+    .wrap_item{
+      grid-template-columns: 1fr;
+      .__item{
+        .__thumb{
+          img{
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
+}
